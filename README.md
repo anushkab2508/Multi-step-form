@@ -17,8 +17,7 @@ This project is a **multi-step form** that guides users through filling out thei
 
 ### 1️⃣ Clone the Repository
 ```bash
-git clone https://github.com/yourusername/multi-step-form.git
-cd multi-step-form
+git clone https://github.com/anushkab2508/Multi-step-form.git
 ```
 ### 2️⃣ Open the Project in a Code Editor
 Use VS Code, Sublime Text, or any preferred code editor.
