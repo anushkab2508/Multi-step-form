@@ -1,0 +1,192 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0a1128;
+    background-image: 
+        radial-gradient(white, rgba(255,255,255,0.3) 5px, transparent 8px),  /* New big dots */
+        radial-gradient(white, rgba(255,255,255,0.2) 2px, transparent 4px),
+        radial-gradient(white, rgba(255,255,255,0.15) 1px, transparent 3px),
+        radial-gradient(white, rgba(255,255,255,0.1) 1.5px, transparent 2.5px),
+        radial-gradient(white, rgba(255,255,255,0.05) 1px, transparent 2px);
+    background-size: 
+        600px 600px,   /* Bigger dots layer */
+        400px 400px, 
+        250px 250px, 
+        300px 300px, 
+        200px 200px;
+    background-position: 
+        0 0, 
+        150px 150px, 
+        100px 100px, 
+        200px 50px, 
+        50px 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+
+
+
+.container {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(29, 78, 216, 0.3);
+    max-width: 400px;
+    width: 100%;
+}
+
+/* Progress Bar */
+.progress-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.progress {
+    position: absolute;
+    width: 0%;
+    height: 4px;
+    background: #28a745;
+    top: 50%;
+    left: 0;
+    transition: width 0.3s ease-in-out;
+}
+
+.step-indicator {
+    width: 30px;
+    height: 30px;
+    background: #ccc;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    z-index: 1;
+    transition: background 0.3s ease-in-out;
+}
+
+.step-indicator.active {
+    background: #28a745;
+}
+
+/* Form */
+.card {
+    display: none;
+    animation: fadeIn 0.5s ease-in-out;
+    background-color: rgba(255, 255, 255, 0.1); /* Slight transparency for a soft glow */
+    border: 1px solid rgba(255, 255, 255, 0.3); 
+    border-radius: 0.5rem;
+    padding: 1rem;
+    max-width: 350px;
+    margin: 0 auto;
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    box-shadow: 0px 0px 15px rgba(0, 153, 255, 0.4); /* Subtle blue glow */
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Active step */
+.card.active {
+    display: block;
+}
+
+/* Glow effect on hover */
+.card:hover {
+    box-shadow: 0px 0px 20px rgba(0, 153, 255, 0.7); /* Slightly stronger glow */
+    transform: scale(1.02); /* Tiny pop-out effect */
+}
+
+/* Form Groups */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+label {
+    margin-bottom: 0.3rem;
+    font-weight: bold;
+}
+
+input, select, textarea {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+/* Error messages */
+.error {
+    color: red;
+    font-size: 0.8rem;
+    margin-top: 0.2rem;
+    display: none;
+}
+
+/* Buttons */
+button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+.prev-btn {
+    background: #6c757d;
+}
+
+.prev-btn:hover {
+    background: #5a6268;
+}
+
+.submit-btn {
+    background: #28a745;
+}
+
+.submit-btn:hover {
+    background: #218838;
+}
+
+/* Summary Section */
+.summary {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.summary p {
+    margin: 0.5rem 0;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Success message */
+.success-message {
+    text-align: center;
+    padding: 2rem 1rem;
+}
